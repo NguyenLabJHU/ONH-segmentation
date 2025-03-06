@@ -20,66 +20,66 @@ To Use:
 5. The process is repeated for num_slices.
 
 Variables:
-ALC - boundary between anterior lamina cribrosa and prelaminar neuaral tissue
-alg_line - structure containing curve fit markings
-allScores - matrix of size (r,c,s), where (r,c) is the location of each pixel in the image and s is the confidence that pixel (r,c) belongs to class s
-allScores1 - matrix of size (r,c,s), where (r,c) is the location of each pixel in the image and s is the confidence that pixel (r,c) belongs to class s as predicted by net1
-allScores2 - same as allScores1 but for the predictions of net2
-BM - Bruch's membrane
-BML - Bruch's membrane left
-BMO - Bruch's membrane opening
-BMR - Bruch's membrane right
-C - Averaged predicted segmentation mask, where a mask is a matrix the same size as the image where the image intensity is replaced by the tissue label of each pixel
-C1 - Segmentation mask predicted by net1 
-C2 - Segmentation mask predicted by net2
-center - center column of image
-classes - tissue labels (strings)
-col - column index
-corr_mask - corrected, interpolated mask
-CS - choroid-sclera interface
-CSL - choroid-sclera interface left
-CSR - choroid-sclera interface right
-current_img - filename of filtered image, replaced with each new image or slice, used to create image datastore for training
-current_mask - filename of corrected, interpolated mask, replaced with each new image or slice, used to create pixel label datastore for training
-dsTrain - augmented training dataset
-fieldIDs - labelIDs used to combine right and left tissues to the same class
-fields - field names of alg_line
-filtered_image - image slice after having pixels at bottom left corner being set to 0 to eliminate watermark and being filtered with guided filter
-i - looping variable
-I - image
-idx - coordinates of single marking
-imds - image datastore containing current filtered image slice 
-j - variable used to loop through all slices of current image stack
-k - variable used to loop through all fields
-l - variable used to loop through all marking coordinates in each alg_line field
-L - indices of coordinates of BM or CS on left side of image
-labelIDs - tissue labels (numbers)
-mark_labels_seg_test - structure of coordinates of markings for each tissue from the averaged predicted mask
-markings - tissue markings for entire stack saved as a cell array of structures
-mask - mask (image where pixel intensity is replaced with pixel label) of curve-fit predicted markings
-masks - saved masks for entire image stack
-ncols - number of columns in image
-net1 - neural network (DeepLabv3+ originally with weights from ResNet-50) trained on 46 stacks of 24 images each (1104 images total) and their linearly interpolated manual markings
-net2 - same as net1, but trained further for 1 epoch on each new image slice and corrected, linearly interpolated markings (6 images stacks of 24 images each for a total of 144 images at the time of upload)
-net2_after - net2 after most recent additional training
-net2_before - net2 before most recent additional training
-nrows - number of rows in image
-options - training options
-original_image - image before filtering (if filtered = true, otherwise this and filtered_image are the same)
-pxds - pixel label datastore
-R - indices of coordinates of BM or CS on right side of image
-roi - structure containing moveable points
-row - row index
-savenet - location of trained networks
-score1 - confidence scores of labels predicted by net1
-score2 - confidence scores of labels predicted by net2
-variables - variables to load from savenet
-xTrans - maximum horizontal translation of image and mask for random augmentation
-yTrans - maximum vertical translation of image and mask for random augmentation
+<br>ALC - boundary between anterior lamina cribrosa and prelaminar neuaral tissue
+<br>alg_line - structure containing curve fit markings
+<br>allScores - matrix of size (r,c,s), where (r,c) is the location of each pixel in the image and s is the confidence that pixel (r,c) belongs to class s
+<br>allScores1 - matrix of size (r,c,s), where (r,c) is the location of each pixel in the image and s is the confidence that pixel (r,c) belongs to class s as predicted by net1
+<br>allScores2 - same as allScores1 but for the predictions of net2
+<br>BM - Bruch's membrane
+<br>BML - Bruch's membrane left
+<br>BMO - Bruch's membrane opening
+<br>BMR - Bruch's membrane right
+<br>C - Averaged predicted segmentation mask, where a mask is a matrix the same size as the image where the image intensity is replaced by the tissue label of each pixel
+<br>C1 - Segmentation mask predicted by net1 
+<br>C2 - Segmentation mask predicted by net2
+<br>center - center column of image
+<br>classes - tissue labels (strings)
+<br>col - column index
+<br>corr_mask - corrected, interpolated mask
+<br>CS - choroid-sclera interface
+<br>CSL - choroid-sclera interface left
+<br>CSR - choroid-sclera interface right
+<br>current_img - filename of filtered image, replaced with each new image or slice, used to create image datastore for training
+<br>current_mask - filename of corrected, interpolated mask, replaced with each new image or slice, used to create pixel label datastore for training
+<br>dsTrain - augmented training dataset
+<br>fieldIDs - labelIDs used to combine right and left tissues to the same class
+<br>fields - field names of alg_line
+<br>filtered_image - image slice after having pixels at bottom left corner being set to 0 to eliminate watermark and being filtered with guided filter
+<br>i - looping variable
+<br>I - image
+<br>idx - coordinates of single marking
+<br>imds - image datastore containing current filtered image slice 
+<br>j - variable used to loop through all slices of current image stack
+<br>k - variable used to loop through all fields
+<br>l - variable used to loop through all marking coordinates in each alg_line field
+<br>L - indices of coordinates of BM or CS on left side of image
+<br>labelIDs - tissue labels (numbers)
+<br>mark_labels_seg_test - structure of coordinates of markings for each tissue from the averaged predicted mask
+<br>markings - tissue markings for entire stack saved as a cell array of structures
+<br>mask - mask (image where pixel intensity is replaced with pixel label) of curve-fit predicted markings
+<br>masks - saved masks for entire image stack
+<br>ncols - number of columns in image
+<br>net1 - neural network (DeepLabv3+ originally with weights from ResNet-50) trained on 46 stacks of 24 images each (1104 images total) and their linearly interpolated manual markings
+<br>net2 - same as net1, but trained further for 1 epoch on each new image slice and corrected, linearly interpolated markings (6 images stacks of 24 images each for a total of 144 images at the time of upload)
+<br>net2_after - net2 after most recent additional training
+<br>net2_before - net2 before most recent additional training
+<br>nrows - number of rows in image
+<br>options - training options
+<br>original_image - image before filtering (if filtered = true, otherwise this and filtered_image are the same)
+<br>pxds - pixel label datastore
+<br>R - indices of coordinates of BM or CS on right side of image
+<br>roi - structure containing moveable points
+<br>row - row index
+<br>savenet - location of trained networks
+<br>score1 - confidence scores of labels predicted by net1
+<br>score2 - confidence scores of labels predicted by net2
+<br>variables - variables to load from savenet
+<br>xTrans - maximum horizontal translation of image and mask for random augmentation
+<br>yTrans - maximum vertical translation of image and mask for random augmentation
 
 Functions:
-boundary_marking.m - creates a segmentation mask by linearly interpolating between markings for each tissue
-linefind_v2.m - curve-fitting function
+<br>boundary_marking.m - creates a segmentation mask by linearly interpolating between markings for each tissue
+<br>linefind_v2.m - curve-fitting function
 
 Other contents:
-most_updated_model.mat - location of net1, most current net2 (net2_after), and second-most current net2 (net2_before)
+<br>most_updated_model.mat - location of net1, most current net2 (net2_after), and second-most current net2 (net2_before)
