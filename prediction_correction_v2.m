@@ -1,7 +1,7 @@
 %% Enter inputs
 
-% Select file path to the image volume
-im_path = "/Users/kellyclingo/Library/CloudStorage/OneDrive-JohnsHopkins/MLSP/Results/Final/Test_Images/eye_5.tiff";
+% Select file path to the image volume (e.g. "/Users/YourName/EyeFolder/Eye1.tiff")
+im_path = ; 
 % Select the ID you would like to give to your image volume (e.g., "Eye_1")
 img_id = "Test_Images_eye_5";
 num_slices = 24;
